@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "erp-one-click-login@iitkgp.local": {
+      "updates": [
+        {
+          "version": "1.4.0",
+          "update_link": "https://lankaramakrishna5.github.io/erp-login/erp-one-click-login-1.4.0.xpi"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ERP One-Click Login</title>
+<meta name="description" content="Log in to IIT Kharagpur ERP with one click in Firefox, including the email OTP.">
+<style>
+  :root {
+    --bg: #f6f8fb; --card: #ffffff; --text: #1b1f24; --muted: #5b6472; --line: #dfe4ec;
+    --blue: #17408c; --blue-hover: #12336f; --on-blue: #ffffff;
+    --warn-bg: #fff6e0; --warn-line: #f0d48a; --warn-text: #5c4300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151a; --card: #1b2028; --text: #e7ebf1; --muted: #9aa4b2; --line: #2c333e;
+      --blue: #6f9bff; --blue-hover: #8fb0ff; --on-blue: #0b1220;
+      --warn-bg: #2b2412; --warn-line: #5a4a1e; --warn-text: #f1d891;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 16px 56px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 6px; }
+  .lead { color: var(--muted); margin: 0 0 28px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  h2 { font-size: 17px; margin: 0 0 12px; }
+  .install { display: block; width: 100%; text-align: center; background: var(--blue); color: var(--on-blue);
+    text-decoration: none; font-weight: 700; font-size: 18px; padding: 16px; border-radius: 10px; }
+  .install:hover { background: var(--blue-hover); }
+  .small { font-size: 14px; color: var(--muted); }
+  ol { margin: 0; padding-left: 22px; }
+  li { margin: 0 0 10px; }
+  li:last-child { margin-bottom: 0; }
+  .btnlabel { display: inline-block; font-size: 14px; font-weight: 600; border: 1px solid var(--line); border-radius: 6px; padding: 0 7px; white-space: nowrap; }
+  kbd { font: 600 13px ui-monospace, Consolas, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; }
+  .notice { background: var(--warn-bg); border: 1px solid var(--warn-line); color: var(--warn-text); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; }
+  .notice p { margin: 0; }
+  .notice p + p { margin-top: 8px; }
+  a { color: var(--blue); }
+  ul { margin: 0; padding-left: 20px; }
+  ul li { margin-bottom: 6px; }
+  footer { font-size: 13px; color: var(--muted); margin-top: 28px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ERP One-Click Login</h1>
+  <p class="lead">Log in to IIT Kharagpur ERP with one click in Firefox — roll number, password, security answer and the email OTP, all filled in for you.</p>
+
+  <div class="notice" id="notFirefox" hidden>
+    <p><b>Open this page in Firefox on your laptop or PC.</b> This add-on is for Firefox only.</p>
+    <p>Using Chrome? Use the original Chrome version instead:
+      <a href="https://github.com/amanjuneja420/erp-one-click-login">github.com/amanjuneja420/erp-one-click-login</a> (follow its Install steps).</p>
+  </div>
+  <div class="notice" id="mobile" hidden>
+    <p><b>This works on Firefox for laptops and PCs, not phones.</b> Open this link on your computer.</p>
+  </div>
+
+  <div class="card">
+    <a class="install" id="install" href="erp-one-click-login-1.4.0.xpi">Install for Firefox</a>
+    <p class="small" style="margin:10px 0 0">Version 1.4.0 · updates install automatically</p>
+  </div>
+
+  <div class="card">
+    <h2>1. Install (3 clicks)</h2>
+    <ol>
+      <li>Click <b>Install for Firefox</b> above.</li>
+      <li>Firefox says it “prevented this site from asking you to install software” — click <span class="btnlabel">Continue to Installation</span>.</li>
+      <li>Click <span class="btnlabel">Add</span>, then <span class="btnlabel">Okay</span>.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>2. First login (once)</h2>
+    <ol>
+      <li>In Firefox, sign in to <a href="https://mail.google.com/">Gmail</a> with the inbox that gets your ERP OTPs.</li>
+      <li>Open <a href="https://erp.iitkgp.ac.in/">erp.iitkgp.ac.in</a> and click the <span class="btnlabel">⚡ One-Click Login</span> button in the bottom-right corner.</li>
+      <li>Type your roll number, password and security answer like always, then click <span class="btnlabel">Get OTP</span>.</li>
+      <li>Click <span class="btnlabel">OK</span> when it asks to remember you. It reads the OTP from Gmail and logs you in.</li>
+    </ol>
+    <p class="small" style="margin:12px 0 0">ERP asks one of your 3 security questions at random. The first time it asks one the add-on hasn't seen, just type that answer once and it's remembered.</p>
+  </div>
+
+  <div class="card">
+    <h2>3. After that: one click</h2>
+    <p style="margin:0">Click <span class="btnlabel">⚡ One-Click Login</span> on the ERP login page, click the add-on's icon → <b>Log in to ERP</b>, or press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> anywhere in Firefox. It never logs in by itself — only when you ask.</p>
+  </div>
+
+  <div class="card">
+    <h2>Good to know</h2>
+    <ul>
+      <li>Your roll number, password and answers are stored <b>only in your Firefox</b> and sent only to ERP. No server, no tracking.</li>
+      <li>The OTP is read from Gmail's unread-mail preview; the email isn't opened and stays unread.</li>
+      <li>Anyone using your unlocked computer could log in to your ERP. <b>Use it only on your own laptop</b>, not lab or shared PCs.</li>
+      <li>Remove any other ERP auto-login add-on — two of them on the login page clash.</li>
+      <li>Something not working? Click the add-on's icon: it shows what happened on the last attempt.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Not an official IIT Kharagpur application. Firefox version of
+    <a href="https://github.com/amanjuneja420/erp-one-click-login">erp-one-click-login</a> by amanjuneja420,
+    which builds on <a href="https://pypi.org/project/iitkgp-erp-login/">iitkgp-erp-login</a> by metakgp.
+  </footer>
+</main>
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var isFirefox = /Firefox\//.test(ua) && !/Seamonkey\//i.test(ua);
+    var isMobile = /Android|iPhone|iPad|Mobile/i.test(ua);
+    if (isMobile) document.getElementById('mobile').hidden = false;
+    else if (!isFirefox) document.getElementById('notFirefox').hidden = false;
+  })();
+</script>
+</body>
+</html>
